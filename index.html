@@ -1,40 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>College List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite College Directory</title>
     <style>
+        /* Top Bar Styles */
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav {
+            margin-right: 40px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        /* Body and Container Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f2f2f2;
+            padding: 0;
+            background-color: #eaeaea;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
 
         h1 {
-            text-align: center;
+            font-size: 2.5rem;
             color: #333;
+            margin-bottom: 20px;
         }
 
+        /* Input and List Styles */
         #searchInput {
             width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
+            padding: 16px;
+            margin-bottom: 20px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 1rem;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         li {
-            padding: 12px 20px;
+            padding: 16px;
             border-bottom: 1px solid #ddd;
             transition: background-color 0.3s;
         }
@@ -45,21 +95,38 @@
 
         li:hover {
             background-color: #f5f5f5;
-            cursor: pointer;
         }
 
         a {
-            color: inherit;
+            color: #333;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <h1>College List</h1>
-    <input type="text" id="searchInput" placeholder="Search colleges..." onkeyup="searchColleges()">
-    <ul id="collegeList">
-        <!-- Colleges will be dynamically added here -->
-    </ul>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="https://tse1.mm.bing.net/th/id/OIG2.CM_OUYs0qJs.TgVzk1L5?pid=ImgGn" alt="Logo">
+        </div>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="about-gi-bill.html">About The GI Bill</a>
+            <a href="resources.html">Other Resources</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Elite College Directory</h1>
+        <input type="text" id="searchInput" placeholder="Search for Top Colleges..." onkeyup="searchColleges()">
+        <ul id="collegeList">
+            <!-- Colleges will be dynamically added here -->
+        </ul>
+    </div>
 
     <script>
         // Array of colleges
@@ -84,7 +151,6 @@
             { name: "Vanderbilt University", url: "vanderbilt.html" },
             { name: "Washington University in St. Louis", url: "wustl.html" },
             { name: "Yale University", url: "yale.html" }
-
         ];
 
         // Function to populate the college list
@@ -117,7 +183,10 @@
         }
 
         // Populate the college list when the page loads
-        populateCollegeList();
+        window.addEventListener('DOMContentLoaded', (event) => {
+            populateCollegeList();
+        });
     </script>
 </body>
 </html>
+
