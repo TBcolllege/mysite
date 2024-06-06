@@ -1,68 +1,145 @@
 <!-- harvard.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harvard University</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #eaeaea;
         }
-        h1, h2 {
+
+        /* Top Bar Styles */
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav {
+            margin-right: 40px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Header Styles */
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Hero Image Styles */
+        .hero {
+            background: url('harvard_hero_image.jpg') no-repeat center center/cover;
+            min-height: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Admissions Facts Styles */
+        .admissions-facts {
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
+
+        .admissions-facts h2, .admissions-facts strong {
+            color: #333;
         }
-        li {
+
+        .admissions-facts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .admissions-facts li {
             margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
-    <h1>Harvard University</h1>
-    <h2>Factsheet</h2>
-
-    <ul>
-        <li><strong>Founded:</strong> September 8, 1636</li>
-        <li><strong>Location:</strong> Cambridge, Massachusetts, USA</li>
-        <li><strong>Type:</strong> Private Ivy League Research University</li>
-        <li><strong>Motto:</strong> "Veritas" (Latin for "Truth")</li>
-        <li><strong>Academic Year:</strong> 2023-2024</li>
-        <li><strong>Degrees Offered:</strong> Bachelor of Arts and Bachelor of Science</li>
-        <li>
-            <strong>Degree Requirements:</strong>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="https://tse1.mm.bing.net/th/id/OIG2.CM_OUYs0qJs.TgVzk1L5?pid=ImgGn" alt="Site Logo">
+        </div>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="college_directory.html">College Directory</a>
+            <a href="about_gi_bill.html">About The GI Bill</a>
+            <a href="other_resources.html">Other Resources</a>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Harvard University</h1>
+        </header>
+        <section class="hero"></section>
+        <section class="admissions-facts">
+            <h2>General</h2>
             <ul>
-                <li>Credit Requirements</li>
-                <li>Residency Requirement</li>
-                <li>Concentration Requirement</li>
-                <li>General Education Requirement</li>
-                <li>Language Requirement</li>
+                <li><strong>Location:</strong> Cambridge, MA</li>
+                <li><strong>Type:</strong> Private</li>
+                <li><strong>Campus Setting:</strong> Urban</li>
+                <li><strong>Graduation Rate:</strong> 98%</li>
+                <li><strong>Average Tuition after Aid:</strong> $15,000</li>
             </ul>
-        </li>
-        <li>
-            <strong>Community:</strong>
+            <h2>Admissions</h2>
             <ul>
-                <li>25,266 undergraduate and graduate students</li>
-                <li>19,639 faculty and staff</li>
-                <li>Over 400,000 alumni worldwide</li>
+                <li><strong>Admission Rate:</strong> 4.6%</li>
+                <li><strong>Average Unweighted GPA:</strong> 3.9</li>
+                <li><strong>SAT Range:</strong> 1460-1580</li>
+                <li><strong>ACT Range:</strong> 33-35</li>
             </ul>
-        </li>
-        <li>
-            <strong>Governance:</strong>
+            <h2>GI Bill</h2>
             <ul>
-                <li>Interim President: Alan Garber</li>
-                <li>Harvard Corporation: The oldest corporation in the Western Hemisphere</li>
-                <li>Board of Overseers: Alumni committed to Harvard's missions and interests</li>
+                <li><strong>Accepts GI Bill:</strong> Yes</li>
+                <li><strong>Yellow Ribbon Program:</strong> Unlimited students, up to $20,000</li>
             </ul>
-        </li>
-        <li><strong>History:</strong> First college in the American colonies; Endowment started with John Harvard's initial donation of 400 books and half his estate</li>
-        <li><strong>Commitment to Diversity:</strong> Inclusion of many backgrounds, cultures, races, identities, life experiences, perspectives, beliefs, and values</li>
-    </ul>
-
-    <p>This factsheet provides a snapshot of Harvard University's rich history, academic offerings, and community. For more detailed information, you can explore the Harvard College Student Handbook or visit the official <a href="https://www.harvard.edu/" target="_blank">Harvard University website</a>.</p>
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.huvets.com/" target="_blank">Veterans & Military Affiliated Students Site</a></li>
+                <li><a href="https://www.harvard.edu/" target="_blank">Official Site</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
